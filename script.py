@@ -7,3 +7,6 @@ def divide(a, b):
 	raise ValueError("Division by zero!")
     return a / b
 
+def mul(a, b):
+    return a * b
+
