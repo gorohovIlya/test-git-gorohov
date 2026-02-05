@@ -4,7 +4,7 @@ def sum(a,b):
 
 def divide(a, b):
     if b == 0:
-	raise ValueError("Division by zero!")
+        raise ValueError("Division by zero!")
     return a / b
 
 def mul(a, b):
