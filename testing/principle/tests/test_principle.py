@@ -37,6 +37,10 @@ def test_addition_clusters():
     assert add(0, -2) == -2
     print("Tests CLUSTERS PASSED")
 
+def test_addition_comutative():
+    assert add(9, 5) == 14
+    assert add(5, 9) == 14
+    print("Test COMMUTATIVITY PASSED")
 
 if __name__ == "__main__":
     test_addition()
