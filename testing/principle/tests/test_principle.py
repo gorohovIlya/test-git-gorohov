@@ -60,10 +60,19 @@ def test_tax_calculator():
     assert tax_calculator(2.34) == 0.35
     print("Test TAX CALCULATOR PASSED")
 
+def test_negative_income():
+    # Иногда правильным поведением кода является упасть
+    try:
+        tax_calculator(-100)
+        print("Test NEGATIVE INCOME FAILED")
+    except ValueError as ve:
+        print("Test NEGATIVE INCOME PASSED")
+
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
     test_addition_clusters()
     test_addition_comutative()
     test_tax_calculator_pesticide()
+    test_negative_income()
     # test_addition_overkill() # try it on your risk
