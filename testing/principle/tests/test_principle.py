@@ -3,7 +3,7 @@
 
 #TODO make it with `pip install -e .`
 
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, tax_calculator_bugged, tax_calculator
 
 def test_addition():
     assert add(2, 2) == 4
@@ -42,7 +42,28 @@ def test_addition_comutative():
     assert add(5, 9) == 14
     print("Test COMMUTATIVITY PASSED")
 
+def test_tax_calculator_pesticide():
+    # only integers don't allow some tests
+    assert tax_calculator_bugged(1000) == 150
+    assert tax_calculator_bugged(100) == 15
+    assert tax_calculator_bugged(10) == 1.5
+    assert tax_calculator_bugged(1) == 0.15
+    assert tax_calculator_bugged(234) == 35.1
+    print("Test TAX CALCULATOR PESTICIDE PASSED")
+    # assert tax_calculator_bugged(2.34) == 0.35 -> ERROR
+
+def test_tax_calculator():
+    assert tax_calculator(1000) == 150
+    assert tax_calculator(100) == 15
+    assert tax_calculator(10) == 1.5
+    assert tax_calculator(1) == 0.15
+    assert tax_calculator(2.34) == 0.35
+    print("Test TAX CALCULATOR PASSED")
+
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
+    test_addition_clusters()
+    test_addition_comutative()
+    test_tax_calculator_pesticide()
     # test_addition_overkill() # try it on your risk
