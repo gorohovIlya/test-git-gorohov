@@ -1,4 +1,7 @@
-def calculate_income_tax(income):
+def calculate_income_tax(income,
+                         investment=False,
+                         is_family_with_children=False,
+                         has_benefits=False):
     result = 0
     # start, addition, taxrate
     tiers = [
