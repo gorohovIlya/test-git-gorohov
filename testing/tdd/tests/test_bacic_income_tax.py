@@ -7,7 +7,7 @@
 # | **Свыше 50 млн руб.** | 22% | 9 402 000 + 22% с суммы превышения |
 
 #TODO make tests to check different types of numbers
-
+import pytest
 from income_tax import calculate_income_tax
 
 def test_income_tax_tier1_basic():
@@ -25,3 +25,7 @@ def test_income_tax_tier4_basic():
 
 def test_income_tax_tier5_basic():
     assert calculate_income_tax(60_000_000) == 11_602_000
+
+@pytest.mark.xfail
+def test_income_tax_negative_income():
+    assert calculate_income_tax(-1_000)
