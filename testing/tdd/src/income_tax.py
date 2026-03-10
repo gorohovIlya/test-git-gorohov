@@ -1,7 +1,16 @@
 def calculate_income_tax(income):
     result = 0
-    if income < 2_400_000:
-        result = income * 0.13
-    else:
-        result = 2_400_000 * 0.13 + (income - 2_400_000) * 0.15
-    return result
+    # start, addition, taxrate
+    tiers = [
+        (0, 0, 0.13),
+        (2_400_000, 312_000, 0.15),
+        (5_000_000, 702_000, 0.18),
+        (20_000_000, 3_402_000, 0.20),
+        (50_000_000, 9_402_000, 0.22)
+    ]
+    for start, addition, taxrate in tiers[::-1]:
+        if income > start:
+            result = (income - start) * taxrate + addition
+            return result
+    raise RuntimeError(f"Error in tax calculation {income}")
+    
