@@ -1,4 +1,4 @@
-create-structure:
+create-structure:	
 	mkdir src tests docs
 	touch README.md setup.py requirements.txt
 	touch docs/DOMAIN.md
@@ -9,3 +9,4 @@ install-e:
 	pip install -e .
 test-pytest:
 	python3 -m pytest
+test: install-dep install-e test-pytest
