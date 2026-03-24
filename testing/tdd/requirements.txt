@@ -1,3 +1,4 @@
-setuptools
-pytest
+fastapi
+matplotlib
 numpy
+requests

@@ -1,4 +1,4 @@
-.PHONY: install run clean
+.PHONY: install run clean check-requirements
 
 VENV_DIR = .venv
 PYTHON = $(VENV_DIR)/bin/python
@@ -17,3 +17,6 @@ clean:
 	rm -rf $(VENV_DIR)
 	find . -type d -name "pycache" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
+
+check-requirements:
+	bash script.sh
