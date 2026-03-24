@@ -1,4 +1,4 @@
-.PHONY: install run clean check-requirements
+.PHONY: install run clean check-requirements typecheck
 
 VENV_DIR = .venv
 PYTHON = $(VENV_DIR)/bin/python
@@ -20,3 +20,6 @@ clean:
 
 check-requirements:
 	bash script.sh
+typecheck:
+	pip install mypy && \
+	mypy calc.py
