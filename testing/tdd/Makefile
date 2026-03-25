@@ -20,6 +20,13 @@ clean:
 
 check-requirements:
 	bash script.sh
+
 typecheck:
 	pip install mypy && \
 	mypy src/calc.py
+
+lint:
+	pip install flake8 && \
+	pip install black && \
+	flake8 src/example.py
+	black --check src/example.py
