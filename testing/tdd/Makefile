@@ -22,4 +22,4 @@ check-requirements:
 	bash script.sh
 typecheck:
 	pip install mypy && \
-	mypy calc.py
+	mypy src/calc.py
