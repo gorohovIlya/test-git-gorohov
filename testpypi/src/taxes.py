@@ -30,3 +30,4 @@ def calculate_property_tax(property_value, rate=0.022):
         if property_value > start:
             return (property_value - start) * taxrate + addition
     raise RuntimeError(f"Error in tax calculation!")
+print('Hello')
