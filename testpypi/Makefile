@@ -15,7 +15,8 @@ run: make-env install
 
 clean:
 	rm -rf $(VENV_DIR)
-	find . -type d -name "pycache" -exec rm -rf {} +
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+	find . -type d -name "*.egg-info" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 
 check-requirements:
