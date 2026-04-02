@@ -8,8 +8,11 @@ def _parse_sale(line: str):
 
     product_name = sale[0]
     category = sale[1]
-    unit_price = float(sale[2])
-    quantity = int(sale[3])  
+    try:
+        unit_price = float(sale[2])
+        quantity = int(sale[3])
+    except ValueError:
+        return None
 
     return {"n": product_name, "c": category, "a": unit_price, "q": quantity}
 
