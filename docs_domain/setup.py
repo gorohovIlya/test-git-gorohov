@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = "income_tax",
+    name = "sales",
     version = "0.0.0",
     long_description = "Calculator of income tax in Russia",
     long_description_content_type = "text/markdown",
