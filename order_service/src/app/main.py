@@ -14,7 +14,7 @@ PRODUCT_SERVICE_URL = os.getenv(
 
 DISCOUNT_SERVICE_URL = os.getenv(
     "DISCOUNT_SERVICE_URL",
-    "http://127.0.0.1:8002",
+    "http://127.0.0.1:8003",
 )
 
 
